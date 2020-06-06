@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
@@ -44,9 +45,9 @@ TagManager:
   - name: Background
     uniqueID: 2460316483
     locked: 0
-  - name: Foreground
-    uniqueID: 762472449
-    locked: 0
   - name: Player
     uniqueID: 2920488889
+    locked: 0
+  - name: Foreground
+    uniqueID: 762472449
     locked: 0
