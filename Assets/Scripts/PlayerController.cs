@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger(PLAYER_DEATH);
             myRigidbody.velocity = deathPhysicsEffect;
+            FindObjectOfType<GameSession>().PlayerDeath();
             myRigidbody.drag = 5;
 
         }
