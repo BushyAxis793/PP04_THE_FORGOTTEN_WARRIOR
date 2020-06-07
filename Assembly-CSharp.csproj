@@ -77,6 +77,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\Assets Pack\2D Snow\License.txt" />
     <None Include="Assets\Assets Pack\2D Volcano\License.txt" />
@@ -89,6 +90,9 @@
     <None Include="Assets\Assets Pack\2D Nature\pixel_snapping_README.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
@@ -153,6 +157,9 @@
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
@@ -167,12 +174,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>C:/Users/Mikołaj/Desktop/Repositories/PP04_THE_FORGOTTEN_WARRIOR/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
