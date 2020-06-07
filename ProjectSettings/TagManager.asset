@@ -18,7 +18,7 @@ TagManager:
   - Player
   - Background
   - Enemy
-  - 
+  - Spikes
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 590717681
+    locked: 0
+  - name: Spikes
+    uniqueID: 1733972493
     locked: 0
   - name: Player
     uniqueID: 2920488889
