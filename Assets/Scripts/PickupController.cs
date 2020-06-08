@@ -5,10 +5,11 @@ using UnityEngine;
 public class PickupController : MonoBehaviour
 {
     [SerializeField] AudioClip pickupSFX;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         int points = 50;
-        //TODO add SFX AudioSource.PlayClipAtPoint(pickupSFX, Camera.main.transform.position;
+        AudioSource.PlayClipAtPoint(pickupSFX, Camera.main.transform.position);
         FindObjectOfType<GameSession>().AddScore(points);
         Destroy(gameObject);
     }

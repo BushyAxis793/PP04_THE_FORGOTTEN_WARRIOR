@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] Vector2 deathPhysicsEffect;
+    [SerializeField] AudioClip deathSFX;
 
     const string PLAYER_RUNNING = "isRunning";
     const string PLAYER_JUMPING = "isJumping";
@@ -87,9 +88,15 @@ public class PlayerController : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger(PLAYER_DEATH);
             myRigidbody.velocity = deathPhysicsEffect;
-            FindObjectOfType<GameSession>().PlayerDeath();
             myRigidbody.drag = 5;
-
+            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
+            StartCoroutine(ProcessDeath());
         }
+    }
+
+    IEnumerator ProcessDeath()
+    {
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<GameSession>().PlayerDeath();
     }
 }

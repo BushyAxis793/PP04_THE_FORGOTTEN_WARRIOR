@@ -13,8 +13,13 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
 
+    [SerializeField] AudioClip themeMusic;
+
+    AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
@@ -61,5 +66,10 @@ public class GameSession : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+
+    private void MusicPlayer()
+    {
+        audioSource.PlayOneShot(themeMusic);
     }
 }

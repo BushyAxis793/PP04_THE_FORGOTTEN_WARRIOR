@@ -292,7 +292,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -95, y: -75}
-  m_SizeDelta: {x: 140, y: 75}
+  m_SizeDelta: {x: 170, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1268661974
 CanvasRenderer:
@@ -462,3 +462,4 @@ MonoBehaviour:
   score: 0
   livesText: {fileID: 200627299}
   scoreText: {fileID: 1268661973}
+  themeMusic: {fileID: 8300000, guid: 2de3b7b9c61fb2f47835e6c01c59005c, type: 3}
