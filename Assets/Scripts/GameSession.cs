@@ -23,6 +23,11 @@ public class GameSession : MonoBehaviour
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
+
+    private void Update()
+    {
+        DebugRestartLevel();
+    }
     public void AddScore(int amount)
     {
         score += amount;
@@ -71,5 +76,14 @@ public class GameSession : MonoBehaviour
     private void MusicPlayer()
     {
         audioSource.PlayOneShot(themeMusic);
+    }
+
+    private void DebugRestartLevel()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
     }
 }

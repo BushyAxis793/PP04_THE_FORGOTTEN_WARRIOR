@@ -20,7 +20,7 @@ TagManager:
   - Enemy
   - Spikes
   - Interectable
-  - 
+  - Enviroment
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: Spikes
     uniqueID: 1733972493
+    locked: 0
+  - name: Enviroment
+    uniqueID: 4011179071
     locked: 0
   - name: Player
     uniqueID: 2920488889
