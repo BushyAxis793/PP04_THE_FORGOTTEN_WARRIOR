@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     const string SPIKES_LAYER = "Spikes";
 
 
-    bool isAlive = true;
+    public bool isAlive = true;
 
     Rigidbody2D myRigidbody;
     Animator myAnimator;
@@ -99,4 +99,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         FindObjectOfType<GameSession>().PlayerDeath();
     }
+
+   
 }

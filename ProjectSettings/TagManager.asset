@@ -45,9 +45,6 @@ TagManager:
   - name: Background
     uniqueID: 2460316483
     locked: 0
-  - name: Enemy
-    uniqueID: 590717681
-    locked: 0
   - name: Spikes
     uniqueID: 1733972493
     locked: 0
@@ -62,4 +59,7 @@ TagManager:
     locked: 0
   - name: Interectable
     uniqueID: 1925676819
+    locked: 0
+  - name: Enemy
+    uniqueID: 590717681
     locked: 0

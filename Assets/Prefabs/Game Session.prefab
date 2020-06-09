@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283491737
-  m_fontColor: {r: 0.6, g: 0.8980393, b: 0.3137255, a: 1}
+    rgba: 4281087053
+  m_fontColor: {r: 0.3019608, g: 0.20392159, b: 0.17254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -291,8 +291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -95, y: -75}
-  m_SizeDelta: {x: 170, y: 75}
+  m_AnchoredPosition: {x: -156.26, y: -75}
+  m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1268661974
 CanvasRenderer:
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 999
+  m_text: 999999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42b9dd78165a28e4c8aa44eb4501efab, type: 2}
   m_sharedMaterial: {fileID: -4297675106497837344, guid: 42b9dd78165a28e4c8aa44eb4501efab,
@@ -331,8 +331,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283491737
-  m_fontColor: {r: 0.6, g: 0.8980393, b: 0.3137255, a: 1}
+    rgba: 4281087053
+  m_fontColor: {r: 0.3019608, g: 0.20392159, b: 0.17254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1268661973}
-    characterCount: 3
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1

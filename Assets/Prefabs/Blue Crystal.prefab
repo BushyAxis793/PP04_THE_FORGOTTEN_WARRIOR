@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1328294875}
   - component: {fileID: 7938856102418954236}
   m_Layer: 13
-  m_Name: Crystal
+  m_Name: Crystal Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1925676819
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3568687385505247181, guid: 216cab1b34c680f44998332d15187242,
+  m_Sprite: {fileID: 4654980107404848300, guid: 7e08a044bb7d62b43a122a811b81bd1b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
