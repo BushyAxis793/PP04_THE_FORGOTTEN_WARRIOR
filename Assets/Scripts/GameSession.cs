@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Boo.Lang;
 
 public class GameSession : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] AudioClip themeMusic;
 
+    [SerializeField] GameObject PauseCanvas;
+
+    bool isMusicOn;
+    bool isMenuActive = false;
+
     AudioSource audioSource;
 
     private void Start()
@@ -22,6 +28,7 @@ public class GameSession : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
+        PauseCanvas.SetActive(false);
     }
 
     private void Update()
@@ -64,6 +71,7 @@ public class GameSession : MonoBehaviour
         lives--;
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+
         livesText.text = lives.ToString();
     }
 
@@ -84,6 +92,40 @@ public class GameSession : MonoBehaviour
         {
             var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentSceneIndex);
+        }
+    }
+
+    public void TurnMusicOnOff()
+    {
+        isMusicOn = !isMusicOn;
+
+        if (isMusicOn)
+        {
+            audioSource.volume = 1f;
+        }
+        else
+        {
+
+            audioSource.volume = 0f;
+        }
+    }
+
+    public void PauseGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isMenuActive = !isMenuActive;
+            if (isMenuActive)
+            {
+                Time.timeScale = 0f;
+                PauseCanvas.SetActive(true);
+
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                PauseCanvas.SetActive(false);
+            }
         }
     }
 }
