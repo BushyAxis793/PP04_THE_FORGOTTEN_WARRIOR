@@ -17,9 +17,11 @@ public class GameSession : MonoBehaviour
     [SerializeField] AudioClip themeMusic;
 
     [SerializeField] GameObject PauseCanvas;
+    [SerializeField] GameObject OptionsCanvas;
 
     bool isMusicOn;
-    bool isMenuActive = false;
+    bool isPauseActive;
+
 
     AudioSource audioSource;
 
@@ -28,12 +30,12 @@ public class GameSession : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
-        PauseCanvas.SetActive(false);
     }
 
     private void Update()
     {
         DebugRestartLevel();
+        PauseGame();
     }
     public void AddScore(int amount)
     {
@@ -43,15 +45,15 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
-        int numGameSessions = FindObjectsOfType<GameSession>().Length;
-        if (numGameSessions > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+        //int numGameSessions = FindObjectsOfType<GameSession>().Length;
+        //if (numGameSessions > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    DontDestroyOnLoad(gameObject);
+        //}
     }
 
     public void PlayerDeath()
@@ -112,10 +114,12 @@ public class GameSession : MonoBehaviour
 
     public void PauseGame()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isMenuActive = !isMenuActive;
-            if (isMenuActive)
+
+            isPauseActive = !isPauseActive;
+            if (isPauseActive)
             {
                 Time.timeScale = 0f;
                 PauseCanvas.SetActive(true);
@@ -128,4 +132,17 @@ public class GameSession : MonoBehaviour
             }
         }
     }
+
+    public void OpenOptionsMenu()
+    {
+        PauseCanvas.SetActive(false);
+        OptionsCanvas.SetActive(true);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+    }
 }
+

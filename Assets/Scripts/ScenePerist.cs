@@ -8,15 +8,15 @@ public class ScenePerist : MonoBehaviour
     int startSceneIndex;
     private void Awake()
     {
-        int numScenePersist = FindObjectsOfType<ScenePerist>().Length;
-        if (numScenePersist > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+        //int numScenePersist = FindObjectsOfType<ScenePerist>().Length;
+        //if (numScenePersist > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    DontDestroyOnLoad(gameObject);
+        //}
     }
 
     private void Start()

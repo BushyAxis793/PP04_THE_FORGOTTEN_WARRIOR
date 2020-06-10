@@ -636,6 +636,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Session
       objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.48235297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4280908791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.48235297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4280908791
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7fac829c5a4b34d99f1bf55aa8a0bc, type: 3}
 --- !u!1001 &65066471

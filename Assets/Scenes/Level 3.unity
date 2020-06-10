@@ -927,7 +927,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1733972493
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.03333336, z: 0}
@@ -3145,7 +3145,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -283788225
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.2388889, y: 0.9444444, z: 0}
@@ -4878,12 +4878,12 @@ PrefabInstance:
     - target: {fileID: 6567083780216983317, guid: 48e4b463b81fe4d489620e550998076c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.814041
+      value: 17.81404
       objectReference: {fileID: 0}
     - target: {fileID: 6567083780216983317, guid: 48e4b463b81fe4d489620e550998076c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.633041
+      value: 8.633025
       objectReference: {fileID: 0}
     - target: {fileID: 6567083780216983530, guid: 48e4b463b81fe4d489620e550998076c,
         type: 3}
@@ -5059,7 +5059,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 762472449
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.004999995, y: 0.004999995, z: 0}
@@ -14073,6 +14073,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Session
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736931470263573, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278213516
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278213516
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7fac829c5a4b34d99f1bf55aa8a0bc, type: 3}
