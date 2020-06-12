@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    bool isMusicOn;
 
     private void Awake()
     {
@@ -18,8 +19,13 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-    private void PlayeMusic()
+    private void PlayerMusic()
     {
         GetComponent<AudioSource>().Play();
+    }
+
+    public void MuteMusic()
+    {
+        AudioListener.pause = !AudioListener.pause;
     }
 }

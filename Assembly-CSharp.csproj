@@ -178,6 +178,7 @@
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\PickupController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefsController.cs" />
     <Compile Include="Assets\Scripts\ScenePerist.cs" />
     <Compile Include="Assets\Scripts\VerticalMove.cs" />
     <None Include="Assets\Assets Pack\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

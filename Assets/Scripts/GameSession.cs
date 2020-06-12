@@ -14,20 +14,20 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
 
-    [SerializeField] AudioClip themeMusic;
+
 
     [SerializeField] GameObject PauseCanvas;
     [SerializeField] GameObject OptionsCanvas;
 
-    bool isMusicOn;
+   
     bool isPauseActive;
 
 
-    AudioSource audioSource;
+
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
@@ -83,10 +83,6 @@ public class GameSession : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void MusicPlayer()
-    {
-        audioSource.PlayOneShot(themeMusic);
-    }
 
     private void DebugRestartLevel()
     {
@@ -97,20 +93,7 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    public void TurnMusicOnOff()
-    {
-        isMusicOn = !isMusicOn;
-
-        if (isMusicOn)
-        {
-            audioSource.volume = 1f;
-        }
-        else
-        {
-
-            audioSource.volume = 0f;
-        }
-    }
+    
 
     public void PauseGame()
     {
@@ -143,6 +126,24 @@ public class GameSession : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+
+    public void SetResolution(int resolution)
+    {
+        if (resolution == 0)
+        {
+            Screen.SetResolution(1920, 1080, true);
+
+        }
+        if (resolution == 1)
+        {
+            Screen.SetResolution(1280, 720, true);
+            Debug.Log(Screen.currentResolution);
+        }
+        if (resolution == 2)
+        {
+            Screen.SetResolution(800, 600, true);
+        }
     }
 }
 
