@@ -49,7 +49,6 @@ MonoBehaviour:
   score: 0
   livesText: {fileID: 8708736932549963683}
   scoreText: {fileID: 8708736931470263573}
-  themeMusic: {fileID: 8300000, guid: 2de3b7b9c61fb2f47835e6c01c59005c, type: 3}
   PauseCanvas: {fileID: 0}
   OptionsCanvas: {fileID: 0}
 --- !u!82 &4674465251569407036

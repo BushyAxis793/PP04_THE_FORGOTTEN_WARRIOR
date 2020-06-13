@@ -97,6 +97,10 @@ public class GameSession : MonoBehaviour
 
     public void PauseGame()
     {
+        if (OptionsCanvas.activeInHierarchy)
+        {
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -145,5 +149,6 @@ public class GameSession : MonoBehaviour
             Screen.SetResolution(800, 600, true);
         }
     }
+
 }
 
