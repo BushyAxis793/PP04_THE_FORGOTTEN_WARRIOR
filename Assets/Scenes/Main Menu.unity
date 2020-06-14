@@ -658,6 +658,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1170599491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708736932140041867, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504624217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1188067340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1281,11 @@ PrefabInstance:
       propertyPath: OptionsCanvas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6035502941693142830, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
+        type: 3}
+      propertyPath: canvasUI
+      value: 
+      objectReference: {fileID: 1170599491}
     - target: {fileID: 6035502941693142831, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
         type: 3}
       propertyPath: m_Name
@@ -1303,7 +1314,7 @@ PrefabInstance:
     - target: {fileID: 8708736932140041867, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8708736932549963683, guid: da7fac829c5a4b34d99f1bf55aa8a0bc,
         type: 3}

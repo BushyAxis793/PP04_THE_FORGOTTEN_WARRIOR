@@ -8,7 +8,7 @@ public class PickupController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!FindObjectOfType<PlayerController>().isAlive) { return; }
+        if (!FindObjectOfType<PlayerController>().IsAlive()) { return; }
 
         int points = 50;
         AudioSource.PlayClipAtPoint(pickupSFX, Camera.main.transform.position);

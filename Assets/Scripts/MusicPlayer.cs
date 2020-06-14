@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class MusicPlayer : MonoBehaviour
 {
 
-     public bool isMusicOn;
-
     AudioSource audioSource;
 
     private void Awake()
@@ -39,17 +37,7 @@ public class MusicPlayer : MonoBehaviour
         audioSource.volume = volume;
     }
 
-    public void MuteAudioSource()
-    {
-        isMusicOn = !isMusicOn;
-        if (isMusicOn)
-        {
-            audioSource.mute = true;
-        }
-        else
-        {
-            audioSource.mute = false;
-        }
+   
 
-    }
+    
 }

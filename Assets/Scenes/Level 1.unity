@@ -14269,12 +14269,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1928473990 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8145945457465218814, guid: d7b8df3978fcb1d448656263b54de41c,
+--- !u!114 &1928473992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8483895979823185438, guid: d7b8df3978fcb1d448656263b54de41c,
     type: 3}
   m_PrefabInstance: {fileID: 510175540107631475}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1958506147
 GameObject:
   m_ObjectHideFlags: 0
@@ -14611,7 +14617,7 @@ PrefabInstance:
     - target: {fileID: 663180034, guid: d7b8df3978fcb1d448656263b54de41c, type: 3}
       propertyPath: muteToggle
       value: 
-      objectReference: {fileID: 1928473990}
+      objectReference: {fileID: 1928473992}
     - target: {fileID: 510175539125388824, guid: d7b8df3978fcb1d448656263b54de41c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -14736,7 +14742,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 50095242}
+      objectReference: {fileID: 663180034}
+    - target: {fileID: 2310651641839334879, guid: d7b8df3978fcb1d448656263b54de41c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchResolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310651641839334879, guid: d7b8df3978fcb1d448656263b54de41c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2854967337310850783, guid: d7b8df3978fcb1d448656263b54de41c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -14945,6 +14961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Persist
       objectReference: {fileID: 0}
+    - target: {fileID: 6835850806405848473, guid: 29b0f5a0c40dfe54c86e7b2a7c6e0a59,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9104272762644409151, guid: 29b0f5a0c40dfe54c86e7b2a7c6e0a59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15000,7 +15021,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6835850806405848473, guid: 29b0f5a0c40dfe54c86e7b2a7c6e0a59, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29b0f5a0c40dfe54c86e7b2a7c6e0a59, type: 3}
 --- !u!1001 &3776831113752255178
 PrefabInstance:

@@ -9,16 +9,17 @@ public class OptionsController : MonoBehaviour
     [SerializeField] Dropdown resolutionDropdown;
     [SerializeField] GameObject optionsCanvas;
     [SerializeField] GameObject pauseCanvas;
+    [SerializeField] Toggle muteToggle;
 
     bool isOptionsAcitve;
     int isMute;
-
-    Toggle muteToggle;
+    int resolutionIndex;
 
     private void Start()
     {
         volumeSlider.value = PlayerPrefsController.GetVolume();
-        isMute = PlayerPrefsController.GetMute();
+        resolutionIndex = PlayerPrefsController.GetResolution();
+        CheckToggleState();
     }
 
     private void Update()
@@ -33,27 +34,64 @@ public class OptionsController : MonoBehaviour
         {
             Debug.LogWarning("No music player found");
         }
+
+        Debug.Log(Screen.currentResolution);
     }
 
-    public void MuteMusic()
+    private void CheckToggleState()
     {
-        FindObjectOfType<MusicPlayer>().MuteAudioSource();
-        if (muteToggle.isOn)
+        bool toogleOn = false;
+        if (PlayerPrefsController.GetMute() == 1)
         {
-            PlayerPrefsController.SetMute(1);
+            toogleOn = true;
         }
         else
         {
-            PlayerPrefsController.SetMute(0);
+            toogleOn = false;
+        }
+
+        muteToggle.isOn = toogleOn;
+    }
+    public void MuteMusic()
+    {
+        var audioSource = FindObjectOfType<MusicPlayer>().GetComponent<AudioSource>();
+
+        if (muteToggle.isOn)
+        {
+            isMute = 1;
+            audioSource.mute = true;
+        }
+        else
+        {
+            isMute = 0;
+            audioSource.mute = false;
+        }
+
+    }
+
+    public void SwitchResolution()
+    {
+        switch (resolutionIndex)
+        {
+            case 0:
+                Screen.SetResolution(1920, 1080, true);
+                break;
+            case 1:
+                Screen.SetResolution(1280, 720, true);
+                break;
+            case 2:
+                Screen.SetResolution(800, 600, true);
+                break;
         }
     }
+
 
     public void CloseOptions()
     {
         PlayerPrefsController.SetVolume(volumeSlider.value);
         PlayerPrefsController.SetMute(isMute);
+        PlayerPrefsController.SetResolution(resolutionIndex);
         optionsCanvas.SetActive(false);
         pauseCanvas.SetActive(true);
-
     }
 }

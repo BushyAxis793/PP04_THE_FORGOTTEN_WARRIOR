@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using Boo.Lang;
+using UnityEngine.UIElements;
 
 public class GameSession : MonoBehaviour
 {
@@ -14,46 +14,39 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
 
-
-
     [SerializeField] GameObject PauseCanvas;
     [SerializeField] GameObject OptionsCanvas;
 
-   
     bool isPauseActive;
 
+    private void Awake()
+    {
+        int numScene = FindObjectsOfType<GameSession>().Length;
+        if (numScene > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
 
+            DontDestroyOnLoad(gameObject);
+        }
 
-
+    }
     private void Start()
     {
-
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
 
     private void Update()
     {
-        DebugRestartLevel();
         PauseGame();
     }
     public void AddScore(int amount)
     {
         score += amount;
         scoreText.text = score.ToString();
-    }
-
-    private void Awake()
-    {
-        //int numGameSessions = FindObjectsOfType<GameSession>().Length;
-        //if (numGameSessions > 1)
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else
-        //{
-        //    DontDestroyOnLoad(gameObject);
-        //}
     }
 
     public void PlayerDeath()
@@ -74,7 +67,9 @@ public class GameSession : MonoBehaviour
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
 
+        score = 0;
         livesText.text = lives.ToString();
+        scoreText.text = score.ToString();
     }
 
     private void ResetGame()
@@ -82,18 +77,6 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
-
-
-    private void DebugRestartLevel()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
-        }
-    }
-
-    
 
     public void PauseGame()
     {
@@ -132,23 +115,7 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void SetResolution(int resolution)
-    {
-        if (resolution == 0)
-        {
-            Screen.SetResolution(1920, 1080, true);
 
-        }
-        if (resolution == 1)
-        {
-            Screen.SetResolution(1280, 720, true);
-            Debug.Log(Screen.currentResolution);
-        }
-        if (resolution == 2)
-        {
-            Screen.SetResolution(800, 600, true);
-        }
-    }
 
 }
 

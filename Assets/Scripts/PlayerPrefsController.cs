@@ -10,16 +10,11 @@ public class PlayerPrefsController : MonoBehaviour
     const float MIN_VOLUME = 0f;
     const float MAX_VOLUME = 1f;
 
-    //Resolution
-    const string RESOLUTION_KEY = "resolution";
-    int resolutionX;
-    int resolutionY;
-
     //Mute Music
     const string MUTE_MUSIC_KEY = "mute";
-    const int MUTE_TRUE = 1;
-    const int MUTE_FALSE = 0;
 
+    //Resolution
+    const string RESOLUTION_KEY = "resolution";
 
     public static void SetVolume(float volume)
     {
@@ -51,5 +46,32 @@ public class PlayerPrefsController : MonoBehaviour
         return PlayerPrefs.GetInt(MUTE_MUSIC_KEY);
     }
 
+    public static void SetResolution(int res)
+    {
+
+        switch (res)
+        {
+            case 0:
+
+                PlayerPrefs.SetInt(RESOLUTION_KEY, res);
+                break;
+
+            case 1:
+
+                PlayerPrefs.SetInt(RESOLUTION_KEY, res);
+                break;
+
+            case 2:
+
+                PlayerPrefs.SetInt(RESOLUTION_KEY, res);
+                break;
+
+        }
+    }
+
+    public static int GetResolution()
+    {
+        return PlayerPrefs.GetInt(RESOLUTION_KEY);
+    }
 
 }
