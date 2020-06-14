@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionsController : MonoBehaviour
@@ -24,6 +26,7 @@ public class OptionsController : MonoBehaviour
 
     private void Update()
     {
+        
 
         var musicPlayer = FindObjectOfType<MusicPlayer>();
         if (musicPlayer)
@@ -37,6 +40,7 @@ public class OptionsController : MonoBehaviour
 
         Debug.Log(Screen.currentResolution);
     }
+
 
     private void CheckToggleState()
     {
