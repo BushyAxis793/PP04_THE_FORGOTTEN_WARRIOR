@@ -19,8 +19,6 @@ public class GameSession : MonoBehaviour
 
     bool isPauseActive;
 
-    int currentSceneIndex;
-
     private void Awake()
     {
         int numScene = FindObjectsOfType<GameSession>().Length;
@@ -37,34 +35,15 @@ public class GameSession : MonoBehaviour
     }
     private void Start()
     {
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
 
     private void Update()
     {
-        PreserveCanvasMenu();
-
-        
-        
-            PauseGame();
-
-        
+        PauseGame();
     }
 
-    private void PreserveCanvasMenu()
-    {
-        var canvasMenu = GetComponentInChildren<Canvas>();
-        if (currentSceneIndex == 0)
-        {
-            canvasMenu.enabled = false;
-        }
-        else
-        {
-            canvasMenu.enabled = true;
-        }
-    }
 
     public void AddScore(int amount)
     {
@@ -87,11 +66,10 @@ public class GameSession : MonoBehaviour
     private void TakeLife()
     {
         lives--;
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+        
 
-        score = 0;
-        livesText.text = lives.ToString();
-        scoreText.text = score.ToString();
     }
 
     private void ResetGame()
