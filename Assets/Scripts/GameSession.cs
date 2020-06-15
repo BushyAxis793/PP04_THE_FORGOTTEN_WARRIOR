@@ -32,6 +32,7 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
+
     }
     private void Start()
     {
@@ -42,8 +43,14 @@ public class GameSession : MonoBehaviour
     private void Update()
     {
         PauseGame();
+        DLoadNextScene();
     }
 
+    public int GetCurrentScene()
+    {
+        var currentScene = SceneManager.GetActiveScene().buildIndex;
+        return currentScene;
+    }
 
     public void AddScore(int amount)
     {
@@ -66,10 +73,12 @@ public class GameSession : MonoBehaviour
     private void TakeLife()
     {
         lives--;
-        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
-        
 
+        SceneManager.LoadScene(GetCurrentScene());
+
+        score = 0;
+        livesText.text = lives.ToString();
+        scoreText.text = score.ToString();
     }
 
     private void ResetGame()
@@ -80,6 +89,11 @@ public class GameSession : MonoBehaviour
 
     public void PauseGame()
     {
+
+        if (GetCurrentScene() == 0)
+        {
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -109,9 +123,18 @@ public class GameSession : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        PauseCanvas.SetActive(false);
     }
 
+    ////Debug
+    private void DLoadNextScene()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
 
+            SceneManager.LoadScene(GetCurrentScene() + 1);
+        }
+    }
 
 }
 
