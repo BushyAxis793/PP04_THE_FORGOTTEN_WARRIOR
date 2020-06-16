@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UIElements;
 
 public class GameSession : MonoBehaviour
 {
@@ -131,7 +130,6 @@ public class GameSession : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-
             SceneManager.LoadScene(GetCurrentScene() + 1);
         }
     }

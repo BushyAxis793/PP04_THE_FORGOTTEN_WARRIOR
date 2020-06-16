@@ -26,7 +26,7 @@ public class OptionsController : MonoBehaviour
 
     private void Update()
     {
-        
+
 
         var musicPlayer = FindObjectOfType<MusicPlayer>();
         if (musicPlayer)
@@ -75,6 +75,8 @@ public class OptionsController : MonoBehaviour
 
     public void SwitchResolution()
     {
+        resolutionIndex = resolutionDropdown.value;
+
         switch (resolutionIndex)
         {
             case 0:
@@ -87,6 +89,8 @@ public class OptionsController : MonoBehaviour
                 Screen.SetResolution(800, 600, true);
                 break;
         }
+
+
     }
 
 
