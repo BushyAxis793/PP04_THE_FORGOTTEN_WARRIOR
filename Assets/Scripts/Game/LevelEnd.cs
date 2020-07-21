@@ -11,13 +11,11 @@ public class LevelEnd : MonoBehaviour
     {
         StartCoroutine(WaitForLoad());
     }
-
     IEnumerator WaitForLoad()
     {
         yield return new WaitForSeconds(loadingDelay);
         LoadNextLevel();
     }
-
     private void LoadNextLevel()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

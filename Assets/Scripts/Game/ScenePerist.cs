@@ -18,7 +18,6 @@ public class ScenePerist : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
     private void Start()
     {
         startSceneIndex = SceneManager.GetActiveScene().buildIndex;

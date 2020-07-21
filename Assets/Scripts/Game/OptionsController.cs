@@ -13,7 +13,6 @@ public class OptionsController : MonoBehaviour
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] Toggle muteToggle;
 
-    bool isOptionsAcitve;
     int isMute;
     int resolutionIndex;
 
@@ -23,11 +22,8 @@ public class OptionsController : MonoBehaviour
         resolutionIndex = PlayerPrefsController.GetResolution();
         CheckToggleState();
     }
-
     private void Update()
     {
-
-
         var musicPlayer = FindObjectOfType<MusicPlayer>();
         if (musicPlayer)
         {
@@ -37,11 +33,7 @@ public class OptionsController : MonoBehaviour
         {
             Debug.LogWarning("No music player found");
         }
-
-        Debug.Log(Screen.currentResolution);
     }
-
-
     private void CheckToggleState()
     {
         bool toogleOn = false;
@@ -72,7 +64,6 @@ public class OptionsController : MonoBehaviour
         }
 
     }
-
     public void SwitchResolution()
     {
         resolutionIndex = resolutionDropdown.value;
@@ -89,11 +80,7 @@ public class OptionsController : MonoBehaviour
                 Screen.SetResolution(800, 600, true);
                 break;
         }
-
-
     }
-
-
     public void CloseOptions()
     {
         PlayerPrefsController.SetVolume(volumeSlider.value);

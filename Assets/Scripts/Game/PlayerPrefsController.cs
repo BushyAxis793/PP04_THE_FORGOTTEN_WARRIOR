@@ -23,12 +23,10 @@ public class PlayerPrefsController : MonoBehaviour
             PlayerPrefs.SetFloat(VOLUME_KEY, volume);
         }
     }
-
     public static float GetVolume()
     {
         return PlayerPrefs.GetFloat(VOLUME_KEY);
     }
-
     public static void SetMute(int mute)
     {
         if (mute == 1)
@@ -40,12 +38,10 @@ public class PlayerPrefsController : MonoBehaviour
             PlayerPrefs.SetInt(MUTE_MUSIC_KEY, mute);
         }
     }
-
     public static int GetMute()
     {
         return PlayerPrefs.GetInt(MUTE_MUSIC_KEY);
     }
-
     public static void SetResolution(int res)
     {
 
@@ -68,7 +64,6 @@ public class PlayerPrefsController : MonoBehaviour
 
         }
     }
-
     public static int GetResolution()
     {
         return PlayerPrefs.GetInt(RESOLUTION_KEY);

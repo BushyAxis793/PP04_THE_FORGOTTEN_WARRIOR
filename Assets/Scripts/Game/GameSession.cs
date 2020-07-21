@@ -30,33 +30,27 @@ public class GameSession : MonoBehaviour
 
             DontDestroyOnLoad(gameObject);
         }
-
-
     }
     private void Start()
     {
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
-
     private void Update()
     {
         PauseGame();
-        DLoadNextScene();
+        LoadNextScene();
     }
-
     public int GetCurrentScene()
     {
         var currentScene = SceneManager.GetActiveScene().buildIndex;
         return currentScene;
     }
-
     public void AddScore(int amount)
     {
         score += amount;
         scoreText.text = score.ToString();
     }
-
     public void PlayerDeath()
     {
         if (lives > 1)
@@ -68,7 +62,6 @@ public class GameSession : MonoBehaviour
             ResetGame();
         }
     }
-
     private void TakeLife()
     {
         lives--;
@@ -79,13 +72,11 @@ public class GameSession : MonoBehaviour
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
     }
-
     private void ResetGame()
     {
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
-
     public void PauseGame()
     {
 
@@ -111,28 +102,24 @@ public class GameSession : MonoBehaviour
             }
         }
     }
-
     public void OpenOptionsMenu()
     {
         PauseCanvas.SetActive(false);
         OptionsCanvas.SetActive(true);
     }
-
     public void LoadMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         PauseCanvas.SetActive(false);
     }
-
-    ////Debug
-    private void DLoadNextScene()
+    //Debug
+    private void LoadNextScene()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
             SceneManager.LoadScene(GetCurrentScene() + 1);
         }
     }
-
 }
 

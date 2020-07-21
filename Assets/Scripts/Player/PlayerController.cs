@@ -45,19 +45,23 @@ public class PlayerController : MonoBehaviour
         Die();
 
     }
-
     public bool IsAlive()
     {
         return isAlive;
     }
     private void Run()
     {
-        float controlInput = CrossPlatformInputManager.GetAxis("Horizontal");
-        Vector2 playerVelocity = new Vector2(controlInput * runSpeed, myRigidbody.velocity.y);
-        myRigidbody.velocity = playerVelocity;
+        myRigidbody.velocity = GetPlayerVelocity();
 
         bool hasHorizontalMove = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool(PLAYER_RUNNING, hasHorizontalMove);
+    }
+
+    private Vector2 GetPlayerVelocity()
+    {
+        float controlInput = CrossPlatformInputManager.GetAxis("Horizontal");
+        Vector2 playerVelocity = new Vector2(controlInput * runSpeed, myRigidbody.velocity.y);
+        return playerVelocity;
     }
 
     private void FlipDirection()
@@ -69,7 +73,6 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }
     }
-
     private void Jump()
     {
         if (!myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask(GROUND_LAYER)))
@@ -85,7 +88,6 @@ public class PlayerController : MonoBehaviour
             myAnimator.SetBool(PLAYER_JUMPING, true);
         }
     }
-
     private void Die()
     {
         if (myBodyCollider2D.IsTouchingLayers(LayerMask.GetMask(ENEMY_LAYER, SPIKES_LAYER)))
@@ -98,12 +100,9 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ProcessDeath());
         }
     }
-
     IEnumerator ProcessDeath()
     {
         yield return new WaitForSeconds(2f);
         FindObjectOfType<GameSession>().PlayerDeath();
     }
-
-
 }
